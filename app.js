@@ -116,12 +116,22 @@ app.get("/trigger_alert", (req, res) => {
 });
 
 app.get("/set_encouragement", (req, res) => {
-  testUser.update({ daysClean: 90, exerciseDays: 105, dollarsSaved: 417 });
+  testUser.update({
+    daysClean: 90,
+    exerciseDays: 105,
+    dollarsSaved: 417,
+    sleepDays: 95
+  });
   res.sendStatus(200);
 });
 
 app.get("/reset_statistics", (req, res) => {
-  testUser.update({ daysClean: 0, exerciseDays: 1, dollarsSaved: 0 });
+  testUser.update({
+    daysClean: 0,
+    exerciseDays: 0,
+    dollarsSaved: 0,
+    sleepDays: 0
+  });
   res.sendStatus(200);
 });
 
