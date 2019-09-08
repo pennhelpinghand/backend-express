@@ -9,7 +9,7 @@ dotenv.config();
 // getting twilio credentials
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
-const TWILIO_NUMBER = "+14159938057";
+const TWILIO_NUMBER = process.env.TWILIO_NUMBER;
 
 const express = require("express");
 const app = express();
